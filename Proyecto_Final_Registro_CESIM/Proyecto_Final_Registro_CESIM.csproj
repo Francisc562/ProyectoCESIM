@@ -4,4 +4,13 @@
     <TargetFramework>netcoreapp3.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Pages\Estudiantes\" />
+    <Folder Include="Pages\Docentes\" />
+    <Folder Include="Pages\Grado\" />
+    <Folder Include="Pages\Matricula\" />
+    <Folder Include="Pages\Tutores\" />
+    <Folder Include="Pages\Periodos\" />
+  </ItemGroup>
+
 </Project>

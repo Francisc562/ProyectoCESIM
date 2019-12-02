@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Francisco Ponce\\source\\repos\\Proyecto_Final_Registro_CESIM\\Proyecto_Final_Registro_CESIM.csproj": {}
+    "C:\\Users\\Francisco Ponce\\Desktop\\ProyectoCESIM\\Proyecto_Final_Registro_CESIM\\Proyecto_Final_Registro_CESIM.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Francisco Ponce\\source\\repos\\Proyecto_Final_Registro_CESIM\\Proyecto_Final_Registro_CESIM.csproj": {
+    "C:\\Users\\Francisco Ponce\\Desktop\\ProyectoCESIM\\Proyecto_Final_Registro_CESIM\\Proyecto_Final_Registro_CESIM.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Francisco Ponce\\source\\repos\\Proyecto_Final_Registro_CESIM\\Proyecto_Final_Registro_CESIM.csproj",
+        "projectUniqueName": "C:\\Users\\Francisco Ponce\\Desktop\\ProyectoCESIM\\Proyecto_Final_Registro_CESIM\\Proyecto_Final_Registro_CESIM.csproj",
         "projectName": "Proyecto_Final_Registro_CESIM",
-        "projectPath": "C:\\Users\\Francisco Ponce\\source\\repos\\Proyecto_Final_Registro_CESIM\\Proyecto_Final_Registro_CESIM.csproj",
+        "projectPath": "C:\\Users\\Francisco Ponce\\Desktop\\ProyectoCESIM\\Proyecto_Final_Registro_CESIM\\Proyecto_Final_Registro_CESIM.csproj",
         "packagesPath": "C:\\Users\\Francisco Ponce\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Francisco Ponce\\source\\repos\\Proyecto_Final_Registro_CESIM\\obj\\",
+        "outputPath": "C:\\Users\\Francisco Ponce\\Desktop\\ProyectoCESIM\\Proyecto_Final_Registro_CESIM\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
