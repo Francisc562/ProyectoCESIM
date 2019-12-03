@@ -13,7 +13,7 @@ namespace Proyecto_Final_Registro_CESIM.Models
         public string Identificacion { get; set; }
         public string Telefono { get; set; }
         public string Direccion { get; set; }
-       
+        public DateTime EstudianteDate { get; set; }
 
         public ICollection<Estudiante> Estudiantes { get; set; }
     }

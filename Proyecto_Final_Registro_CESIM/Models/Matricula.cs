@@ -14,12 +14,10 @@ namespace Proyecto_Final_Registro_CESIM.Models
         public int matriculaID { get; set; }
         public int gradoID { get; set; }
         public int periodoID { get; set; }
-        public int estudianteID { get; set; }
         public Grad? Grad { get; set; }
 
         public Grado Grado { get; set; }
         public Periodo Periodo { get; set; }
-        public Estudiante Estudiante { get; set; }
 
     public ICollection<Usuario> Usuarios { get; set; }
     }
