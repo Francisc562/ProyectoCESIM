@@ -7,7 +7,7 @@ namespace Proyecto_Final_Registro_CESIM.Models
 {
     public class Tutor
     {
-        public int IDTUTOR { get; set; }
+        public int tutorID { get; set; }
         public string Nombres { get; set; }
         public string Apellidos { get; set; }
         public string Identificacion { get; set; }

@@ -7,7 +7,7 @@ namespace Proyecto_Final_Registro_CESIM.Models
 {
     public class Docente
     {
-        public int IDDOCENTE { get; set; }
+        public int docenteID { get; set; }
         public string Nombre { get; set; }
         public string Especialidad { get; set; }
         public string Correo { get; set; }
