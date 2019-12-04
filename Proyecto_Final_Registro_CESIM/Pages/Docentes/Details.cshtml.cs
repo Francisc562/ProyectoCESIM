@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using Proyecto_Final_Registro_CESIM.Data;
 using Proyecto_Final_Registro_CESIM.Models;
 
-namespace Proyecto_Final_Registro_CESIM.Pages.Estudiantes
+namespace Proyecto_Final_Registro_CESIM.Pages.Docentes
 {
     public class DetailsModel : PageModel
     {
@@ -19,7 +19,7 @@ namespace Proyecto_Final_Registro_CESIM.Pages.Estudiantes
             _context = context;
         }
 
-        public Estudiante Estudiante { get; set; }
+        public Docente Docente { get; set; }
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -28,10 +28,9 @@ namespace Proyecto_Final_Registro_CESIM.Pages.Estudiantes
                 return NotFound();
             }
 
-            Estudiante = await _context.Estudiante
-                .Include(e => e.Tutor).FirstOrDefaultAsync(m => m.estudianteID == id);
+            Docente = await _context.Docente.FirstOrDefaultAsync(m => m.docenteID == id);
 
-            if (Estudiante == null)
+            if (Docente == null)
             {
                 return NotFound();
             }

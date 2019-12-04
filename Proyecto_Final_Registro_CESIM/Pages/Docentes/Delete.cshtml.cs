@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using Proyecto_Final_Registro_CESIM.Data;
 using Proyecto_Final_Registro_CESIM.Models;
 
-namespace Proyecto_Final_Registro_CESIM.Pages.Estudiantes
+namespace Proyecto_Final_Registro_CESIM.Pages.Docentes
 {
     public class DeleteModel : PageModel
     {
@@ -20,7 +20,7 @@ namespace Proyecto_Final_Registro_CESIM.Pages.Estudiantes
         }
 
         [BindProperty]
-        public Estudiante Estudiante { get; set; }
+        public Docente Docente { get; set; }
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -29,10 +29,9 @@ namespace Proyecto_Final_Registro_CESIM.Pages.Estudiantes
                 return NotFound();
             }
 
-            Estudiante = await _context.Estudiante
-                .Include(e => e.Tutor).FirstOrDefaultAsync(m => m.estudianteID == id);
+            Docente = await _context.Docente.FirstOrDefaultAsync(m => m.docenteID == id);
 
-            if (Estudiante == null)
+            if (Docente == null)
             {
                 return NotFound();
             }
@@ -46,11 +45,11 @@ namespace Proyecto_Final_Registro_CESIM.Pages.Estudiantes
                 return NotFound();
             }
 
-            Estudiante = await _context.Estudiante.FindAsync(id);
+            Docente = await _context.Docente.FindAsync(id);
 
-            if (Estudiante != null)
+            if (Docente != null)
             {
-                _context.Estudiante.Remove(Estudiante);
+                _context.Docente.Remove(Docente);
                 await _context.SaveChangesAsync();
             }
 

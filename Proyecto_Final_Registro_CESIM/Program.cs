@@ -1,11 +1,9 @@
 using Proyecto_Final_Registro_CESIM.Data;
 using Microsoft.Extensions.DependencyInjection;
-using System;
-
 using Microsoft.AspNetCore.Hosting;
-
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using System;
 
 namespace Proyecto_Final_Registro_CESIM
 {
@@ -28,7 +26,9 @@ namespace Proyecto_Final_Registro_CESIM
                 try
                 {
                     var context = services.GetRequiredService<Proyecto_Final_Registro_CESIMContext>();
-                    context.Database.EnsureCreated();
+                    //context.Database.EnsureCreated();
+                    
+                    DbInitializer.Initialize(context);
                 }
                 catch (Exception ex)
                 {

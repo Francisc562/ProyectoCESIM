@@ -29,6 +29,7 @@ namespace Proyecto_Final_Registro_CESIM
 
             services.AddDbContext<Proyecto_Final_Registro_CESIMContext>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString("Proyecto_Final_Registro_CESIMContext")));
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

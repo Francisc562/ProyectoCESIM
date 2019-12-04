@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore;
 using Proyecto_Final_Registro_CESIM.Data;
 using Proyecto_Final_Registro_CESIM.Models;
 
-namespace Proyecto_Final_Registro_CESIM.Pages.Estudiantes
+namespace Proyecto_Final_Registro_CESIM.Pages.Docentes
 {
     public class EditModel : PageModel
     {
@@ -21,7 +21,7 @@ namespace Proyecto_Final_Registro_CESIM.Pages.Estudiantes
         }
 
         [BindProperty]
-        public Estudiante Estudiante { get; set; }
+        public Docente Docente { get; set; }
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -30,14 +30,12 @@ namespace Proyecto_Final_Registro_CESIM.Pages.Estudiantes
                 return NotFound();
             }
 
-            Estudiante = await _context.Estudiante
-                .Include(e => e.Tutor).FirstOrDefaultAsync(m => m.estudianteID == id);
+            Docente = await _context.Docente.FirstOrDefaultAsync(m => m.docenteID == id);
 
-            if (Estudiante == null)
+            if (Docente == null)
             {
                 return NotFound();
             }
-           ViewData["tutorID"] = new SelectList(_context.Set<Tutor>(), "tutorID", "tutorID");
             return Page();
         }
 
@@ -50,7 +48,7 @@ namespace Proyecto_Final_Registro_CESIM.Pages.Estudiantes
                 return Page();
             }
 
-            _context.Attach(Estudiante).State = EntityState.Modified;
+            _context.Attach(Docente).State = EntityState.Modified;
 
             try
             {
@@ -58,7 +56,7 @@ namespace Proyecto_Final_Registro_CESIM.Pages.Estudiantes
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!EstudianteExists(Estudiante.estudianteID))
+                if (!DocenteExists(Docente.docenteID))
                 {
                     return NotFound();
                 }
@@ -71,9 +69,9 @@ namespace Proyecto_Final_Registro_CESIM.Pages.Estudiantes
             return RedirectToPage("./Index");
         }
 
-        private bool EstudianteExists(int id)
+        private bool DocenteExists(int id)
         {
-            return _context.Estudiante.Any(e => e.estudianteID == id);
+            return _context.Docente.Any(e => e.docenteID == id);
         }
     }
 }

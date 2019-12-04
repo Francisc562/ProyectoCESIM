@@ -7,7 +7,7 @@ namespace Proyecto_Final_Registro_CESIM.Models
 {
     public enum lev
     {
-        Primero, Segundo, Tercero, Cuarto, Quinto, Sexto
+        Prescolar, Primero, Segundo, Tercero, Cuarto, Quinto, Sexto
     }
 
     public class Grado
@@ -15,9 +15,7 @@ namespace Proyecto_Final_Registro_CESIM.Models
         public int gradoID { get; set; }
         public int docenteID { get; set; }
         public lev? Nivel { get; set; }
-        
        
-   
         public Docente docente { get; set; }
         public ICollection<Matricula> matriculas { get; set; }
 

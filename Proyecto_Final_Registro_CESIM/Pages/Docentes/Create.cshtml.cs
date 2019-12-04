@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Proyecto_Final_Registro_CESIM.Data;
 using Proyecto_Final_Registro_CESIM.Models;
 
-namespace Proyecto_Final_Registro_CESIM.Pages.Estudiantes
+namespace Proyecto_Final_Registro_CESIM.Pages.Docentes
 {
     public class CreateModel : PageModel
     {
@@ -21,12 +21,11 @@ namespace Proyecto_Final_Registro_CESIM.Pages.Estudiantes
 
         public IActionResult OnGet()
         {
-        ViewData["tutorID"] = new SelectList(_context.Set<Tutor>(), "tutorID", "tutorID");
             return Page();
         }
 
         [BindProperty]
-        public Estudiante Estudiante { get; set; }
+        public Docente Docente { get; set; }
 
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for
         // more details see https://aka.ms/RazorPagesCRUD.
@@ -37,7 +36,7 @@ namespace Proyecto_Final_Registro_CESIM.Pages.Estudiantes
                 return Page();
             }
 
-            _context.Estudiante.Add(Estudiante);
+            _context.Docente.Add(Docente);
             await _context.SaveChangesAsync();
 
             return RedirectToPage("./Index");

@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using Proyecto_Final_Registro_CESIM.Data;
 using Proyecto_Final_Registro_CESIM.Models;
 
-namespace Proyecto_Final_Registro_CESIM.Pages.Estudiantes
+namespace Proyecto_Final_Registro_CESIM.Pages.Docentes
 {
     public class IndexModel : PageModel
     {
@@ -19,12 +19,11 @@ namespace Proyecto_Final_Registro_CESIM.Pages.Estudiantes
             _context = context;
         }
 
-        public IList<Estudiante> Estudiante { get;set; }
+        public IList<Docente> Docente { get;set; }
 
         public async Task OnGetAsync()
         {
-            Estudiante = await _context.Estudiante
-                .Include(e => e.Tutor).ToListAsync();
+            Docente = await _context.Docente.ToListAsync();
         }
     }
 }

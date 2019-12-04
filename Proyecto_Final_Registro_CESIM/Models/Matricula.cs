@@ -5,9 +5,9 @@ using System.Threading.Tasks;
 
 namespace Proyecto_Final_Registro_CESIM.Models
 {
-    public enum Grad
+    public enum Seccion
     {
-        Prescolar, A, B, C,
+        A, B, C
     }
     public class Matricula
     {
@@ -15,12 +15,15 @@ namespace Proyecto_Final_Registro_CESIM.Models
         public int gradoID { get; set; }
         public int periodoID { get; set; }
         public int estudianteID { get; set; }
-        public Grad? Grad { get; set; }
+        
+        public Seccion? Seccion { get; set; }
+        
 
         public Grado Grado { get; set; }
         public Periodo Periodo { get; set; }
         public Estudiante Estudiante { get; set; }
-
+        
+        
     public ICollection<Usuario> Usuarios { get; set; }
     }
 }
