@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -8,6 +8,8 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.EntityFrameworkCore;
+using Proyecto_Final_Registro_CESIM.Data;
 
 namespace Proyecto_Final_Registro_CESIM
 {
@@ -24,6 +26,9 @@ namespace Proyecto_Final_Registro_CESIM
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
+
+            services.AddDbContext<Proyecto_Final_Registro_CESIMContext>(options =>
+                    options.UseSqlServer(Configuration.GetConnectionString("Proyecto_Final_Registro_CESIMContext")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

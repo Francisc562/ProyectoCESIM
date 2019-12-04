@@ -5,14 +5,18 @@ using System.Threading.Tasks;
 
 namespace Proyecto_Final_Registro_CESIM.Models
 {
+    public enum sex
+    {
+        Masculino, Femenino,
+    }
     public class Estudiante
     {
-        public int IDESTUDIANTE { get; set; }
+        public int estudianteID { get; set; }
         public int tutorID { get; set; }
         public string Nombre { get; set; }
         public string Apellidos { get; set; }
 
-        public string Sexo { get; set; }
+        public sex? Sexo { get; set; }
        
         public DateTime Nacimiento { get; set; }
         public string Codigo { get; set; }
