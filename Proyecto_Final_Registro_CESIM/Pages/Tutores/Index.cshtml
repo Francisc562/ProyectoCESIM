@@ -1,0 +1,60 @@
+﻿@page
+@model Proyecto_Final_Registro_CESIM.Pages.Tutores.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Tutor[0].Nombres)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tutor[0].Apellidos)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tutor[0].Identificacion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tutor[0].Telefono)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tutor[0].Direccion)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Tutor) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombres)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Apellidos)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Identificacion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Telefono)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Direccion)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.tutorID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.tutorID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.tutorID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

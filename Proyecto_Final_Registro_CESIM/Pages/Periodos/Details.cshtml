@@ -1,0 +1,25 @@
+﻿@page
+@model Proyecto_Final_Registro_CESIM.Pages.Periodos.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Periodo</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Periodo.Parcial)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Periodo.Parcial)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Periodo.periodoID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

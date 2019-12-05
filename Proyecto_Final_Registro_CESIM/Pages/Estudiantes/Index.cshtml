@@ -1,0 +1,66 @@
+﻿@page
+@model Proyecto_Final_Registro_CESIM.Pages.Estudiantes.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Estudiante[0].Nombres)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Estudiante[0].Apellidos)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Estudiante[0].Sexo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Estudiante[0].Nacimiento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Estudiante[0].Codigo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Estudiante[0].Tutor)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Estudiante) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombres)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Apellidos)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sexo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nacimiento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Codigo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tutor.tutorID)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.estudianteID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.estudianteID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.estudianteID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

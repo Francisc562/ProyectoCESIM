@@ -1,0 +1,54 @@
+﻿@page
+@model Proyecto_Final_Registro_CESIM.Pages.Matriculas.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Matricula[0].Seccion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Matricula[0].Grado)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Matricula[0].Periodo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Matricula[0].Estudiante)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Matricula) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Seccion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Grado.gradoID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Periodo.periodoID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Estudiante.estudianteID)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.matriculaID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.matriculaID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.matriculaID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
