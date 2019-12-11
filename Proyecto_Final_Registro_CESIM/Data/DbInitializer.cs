@@ -5,17 +5,17 @@ using System.Linq;
 
 namespace Proyecto_Final_Registro_CESIM.Data
 {
-    public class DbInitializer
+    public class DbInitializer 
     {
 
         public static void Initialize(Proyecto_Final_Registro_CESIMContext context)
         {
             context.Database.EnsureCreated();
 
-            // Look for any students.
+            
             if (context.Docentes.Any())
             {
-                return;   // DB has been seeded
+                return;   
             }
 
             var docentes = new Docente[]
@@ -38,10 +38,10 @@ namespace Proyecto_Final_Registro_CESIM.Data
 
             var grados = new Grado[]
            {
-                new Grado{docenteID=10, Nivel=lev.Prescolar},
-                new Grado{docenteID=11, Nivel=lev.Primero},
-                new Grado{docenteID=12, Nivel=lev.Segundo},
-                new Grado{docenteID=13, Nivel=lev.Tercero},
+                new Grado{docenteID=1, Nivel=lev.Prescolar},
+                new Grado{docenteID=2, Nivel=lev.Primero},
+                new Grado{docenteID=3, Nivel=lev.Segundo},
+                new Grado{docenteID=4, Nivel=lev.Tercero},
 
            };
             foreach (Grado g in grados)
@@ -99,10 +99,10 @@ namespace Proyecto_Final_Registro_CESIM.Data
 
             var matriculas = new Matricula[]
             {
-                new Matricula{gradoID=02, periodoID=01, estudianteID=01, Seccion=Seccion.A},
-                new Matricula{gradoID=02, periodoID=01, estudianteID=02, Seccion=Seccion.B},
-                new Matricula{gradoID=02, periodoID=01, estudianteID=03, Seccion=Seccion.B},
-                new Matricula{gradoID=02, periodoID=01, estudianteID=04, Seccion=Seccion.A},
+                new Matricula{gradoID=1,periodoID=1, estudianteID=1, Seccion=Seccion.A},
+                new Matricula{gradoID=2,periodoID=2, estudianteID=2, Seccion=Seccion.B},
+                new Matricula{gradoID=3,periodoID=1, estudianteID=3, Seccion=Seccion.B},
+                new Matricula{gradoID=4,periodoID=2, estudianteID=4, Seccion=Seccion.A},
 
 
             };
@@ -115,7 +115,7 @@ namespace Proyecto_Final_Registro_CESIM.Data
             var usuarios = new Usuario[]
            {
                 new Usuario{Correo="Salomon@gmail.com", Clave="Admin"},
-                    new Usuario{Correo="Salomoniba@gmail.com", Clave="Admin1"},
+                    new Usuario{Correo="Salomoniba@gmail.com", Clave="AdminD"},
 
 
            };

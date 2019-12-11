@@ -57,7 +57,6 @@ C:\Users\Francisco Ponce\Desktop\ProyectoCESIM\Proyecto_Final_Registro_CESIM\obj
 C:\Users\Francisco Ponce\Desktop\ProyectoCESIM\Proyecto_Final_Registro_CESIM\obj\Debug\netcoreapp3.0\Razor\Pages\Error.cshtml.g.cs
 C:\Users\Francisco Ponce\Desktop\ProyectoCESIM\Proyecto_Final_Registro_CESIM\obj\Debug\netcoreapp3.0\Razor\Pages\Index.cshtml.g.cs
 C:\Users\Francisco Ponce\Desktop\ProyectoCESIM\Proyecto_Final_Registro_CESIM\obj\Debug\netcoreapp3.0\Razor\Pages\Privacy.cshtml.g.cs
-C:\Users\Francisco Ponce\Desktop\ProyectoCESIM\Proyecto_Final_Registro_CESIM\obj\Debug\netcoreapp3.0\Razor\Pages\Shared\_Layout.cshtml.g.cs
 C:\Users\Francisco Ponce\Desktop\ProyectoCESIM\Proyecto_Final_Registro_CESIM\obj\Debug\netcoreapp3.0\Razor\Pages\Shared\_ValidationScriptsPartial.cshtml.g.cs
 C:\Users\Francisco Ponce\Desktop\ProyectoCESIM\Proyecto_Final_Registro_CESIM\obj\Debug\netcoreapp3.0\Razor\Pages\_ViewImports.cshtml.g.cs
 C:\Users\Francisco Ponce\Desktop\ProyectoCESIM\Proyecto_Final_Registro_CESIM\obj\Debug\netcoreapp3.0\Razor\Pages\_ViewStart.cshtml.g.cs
@@ -174,6 +173,7 @@ C:\Users\Francisco Ponce\Desktop\ProyectoCESIM\Proyecto_Final_Registro_CESIM\obj
 C:\Users\Francisco Ponce\Desktop\ProyectoCESIM\Proyecto_Final_Registro_CESIM\obj\Debug\netcoreapp3.0\Razor\Pages\Tutores\Details.cshtml.g.cs
 C:\Users\Francisco Ponce\Desktop\ProyectoCESIM\Proyecto_Final_Registro_CESIM\obj\Debug\netcoreapp3.0\Razor\Pages\Tutores\Edit.cshtml.g.cs
 C:\Users\Francisco Ponce\Desktop\ProyectoCESIM\Proyecto_Final_Registro_CESIM\obj\Debug\netcoreapp3.0\Razor\Pages\Tutores\Index.cshtml.g.cs
+C:\Users\Francisco Ponce\Desktop\ProyectoCESIM\Proyecto_Final_Registro_CESIM\obj\Debug\netcoreapp3.0\Razor\Pages\Shared\_Layout.cshtml.g.cs
 C:\Users\Francisco Ponce\Desktop\ProyectoCESIM\Proyecto_Final_Registro_CESIM\obj\Debug\netcoreapp3.0\Razor\Pages\Estudiantes\Create.cshtml.g.cs
 C:\Users\Francisco Ponce\Desktop\ProyectoCESIM\Proyecto_Final_Registro_CESIM\obj\Debug\netcoreapp3.0\Razor\Pages\Estudiantes\Delete.cshtml.g.cs
 C:\Users\Francisco Ponce\Desktop\ProyectoCESIM\Proyecto_Final_Registro_CESIM\obj\Debug\netcoreapp3.0\Razor\Pages\Estudiantes\Details.cshtml.g.cs

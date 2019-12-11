@@ -24,6 +24,6 @@ namespace Proyecto_Final_Registro_CESIM.Models
         public Estudiante Estudiante { get; set; }
         
         
-    public ICollection<Usuario> Usuarios { get; set; }
+    
     }
 }
